@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../featuers/signup/presentation/pages/signup_screen.dart';
 
 class RoutesName {
-  static const String login = "login";
+  static const String login = "Login";
   static const String signup = "/";
   static const String home = "Home";
 }
