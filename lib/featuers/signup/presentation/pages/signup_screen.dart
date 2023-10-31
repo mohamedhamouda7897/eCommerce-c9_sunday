@@ -1,3 +1,6 @@
+import 'package:e_commerce_c9_sunday/core/utils/app_colors.dart';
+import 'package:e_commerce_c9_sunday/core/utils/app_images.dart';
+import 'package:e_commerce_c9_sunday/core/utils/app_strings.dart';
 import 'package:e_commerce_c9_sunday/featuers/signup/presentation/bloc/sign_up_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,14 +20,13 @@ class SignupScreen extends StatelessWidget {
     return Form(
       key: signkey,
       child: Scaffold(
-        backgroundColor: Color(0xff004182),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Padding(
                 padding: EdgeInsets.only(left: 97.w, right: 96.r, top: 85.h),
-                child: Image.asset('assets/images/route.png'),
+                child: Image.asset(LoginAndSignUpImages.RouteImage),
               ),
               SizedBox(
                 height: 46.9.h,
@@ -34,11 +36,11 @@ class SignupScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Full Name',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18.sp,
-                            color: Colors.white)),
+                    Text(LoginAndSignupStrings.Fullname,
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyMedium
+                            ?.copyWith(fontWeight: FontWeight.w500)),
                     SizedBox(
                       height: 24.h,
                     ),
@@ -46,17 +48,19 @@ class SignupScreen extends StatelessWidget {
                         controller: Fullnamecontroller,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'please enter your full name';
+                            return LoginAndSignupStrings.errorname;
                           }
                           return null;
                         },
                         decoration: InputDecoration(
                           // label: Text('enter your name' , style: GoogleFonts.poppins(fontWeight: FontWeight.w300),),
-                          hintText: "enter your full name",
-                          hintStyle: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w300,
-                              fontSize: 18.sp,
-                              color: Color(0xff000000)),
+                          hintText: LoginAndSignupStrings.EnterFullname,
+                          hintStyle: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  fontWeight: FontWeight.w300,
+                                  color: LoginAndSignUpColours.blackfont),
                           filled: true,
                           fillColor: Colors.white,
                           focusColor: Colors.transparent,
@@ -69,10 +73,10 @@ class SignupScreen extends StatelessWidget {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(15)),
                               borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                              BorderSide(color: Colors.transparent)),
                           focusedErrorBorder: OutlineInputBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                              BorderRadius.all(Radius.circular(15)),
                               borderSide:
                                   BorderSide(color: Colors.transparent)),
                           focusedBorder: OutlineInputBorder(
@@ -83,11 +87,10 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(
                       height: 32.h,
                     ),
-                    Text('Mobile Number',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18.sp,
-                            color: Colors.white)),
+                    Text(LoginAndSignupStrings.Mobile,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              fontWeight: FontWeight.w500,
+                            )),
                     SizedBox(
                       height: 24.h,
                     ),
@@ -96,17 +99,19 @@ class SignupScreen extends StatelessWidget {
                         keyboardType: TextInputType.number,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'please enter your phone no.';
+                            return LoginAndSignupStrings.errormobile;
                           }
                           return null;
                         },
                         decoration: InputDecoration(
                           // label: Text('enter your name' , style: GoogleFonts.poppins(fontWeight: FontWeight.w300),),
-                          hintText: "enter your mobile no.",
-                          hintStyle: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w300,
-                              fontSize: 18.sp,
-                              color: Color(0xff000000)),
+                          hintText: LoginAndSignupStrings.entermobile,
+                          hintStyle: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  fontWeight: FontWeight.w300,
+                                  color: LoginAndSignUpColours.blackfont),
                           filled: true,
                           fillColor: Colors.white,
                           focusColor: Colors.transparent,
@@ -119,10 +124,10 @@ class SignupScreen extends StatelessWidget {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(15)),
                               borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                              BorderSide(color: Colors.transparent)),
                           focusedErrorBorder: OutlineInputBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                              BorderRadius.all(Radius.circular(15)),
                               borderSide:
                                   BorderSide(color: Colors.transparent)),
                           focusedBorder: OutlineInputBorder(
@@ -133,11 +138,10 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(
                       height: 32.h,
                     ),
-                    Text('E-mail address',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18.sp,
-                            color: Colors.white)),
+                    Text(LoginAndSignupStrings.Email,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              fontWeight: FontWeight.w500,
+                            )),
                     SizedBox(
                       height: 24.h,
                     ),
@@ -145,17 +149,19 @@ class SignupScreen extends StatelessWidget {
                         controller: Emailcontroller,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'please enter your email';
+                            return LoginAndSignupStrings.erroremail;
                           }
                           return null;
                         },
                         decoration: InputDecoration(
                           // label: Text('enter your name' , style: GoogleFonts.poppins(fontWeight: FontWeight.w300),),
-                          hintText: "enter your email address",
-                          hintStyle: GoogleFonts.poppins(
-                              fontWeight: FontWeight.w300,
-                              fontSize: 18.sp,
-                              color: Color(0xff000000)),
+                          hintText: LoginAndSignupStrings.enteryouremail,
+                          hintStyle: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(
+                                  fontWeight: FontWeight.w300,
+                                  color: LoginAndSignUpColours.blackfont),
                           filled: true,
                           fillColor: Colors.white,
                           focusColor: Colors.transparent,
@@ -168,10 +174,10 @@ class SignupScreen extends StatelessWidget {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(15)),
                               borderSide:
-                                  BorderSide(color: Colors.transparent)),
+                              BorderSide(color: Colors.transparent)),
                           focusedErrorBorder: OutlineInputBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
+                              BorderRadius.all(Radius.circular(15)),
                               borderSide:
                                   BorderSide(color: Colors.transparent)),
                           focusedBorder: OutlineInputBorder(
@@ -182,11 +188,10 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(
                       height: 32.h,
                     ),
-                    Text('Password',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18.sp,
-                            color: Colors.white)),
+                    Text(LoginAndSignupStrings.Password,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              fontWeight: FontWeight.w500,
+                            )),
                     SizedBox(
                       height: 24.h,
                     ),
@@ -195,16 +200,18 @@ class SignupScreen extends StatelessWidget {
                         obscureText: true,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'please enter your password';
+                            return LoginAndSignupStrings.errorloginpassword;
                           }
                           return null;
                         },
                         decoration: InputDecoration(
-                            hintText: "enter your password",
-                            hintStyle: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w300,
-                                fontSize: 18.sp,
-                                color: Color(0xff000000)),
+                            hintText: LoginAndSignupStrings.enterpassword,
+                            hintStyle: Theme.of(context)
+                                .textTheme
+                                .bodyMedium
+                                ?.copyWith(
+                                    fontWeight: FontWeight.w300,
+                                    color: LoginAndSignUpColours.blackfont),
                             filled: true,
                             fillColor: Colors.white,
                             focusColor: Colors.transparent,
@@ -217,21 +224,21 @@ class SignupScreen extends StatelessWidget {
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(15)),
                                 borderSide:
-                                    BorderSide(color: Colors.transparent)),
+                                BorderSide(color: Colors.transparent)),
                             enabledBorder: OutlineInputBorder(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(15)),
+                                BorderRadius.all(Radius.circular(15)),
                                 borderSide:
-                                    BorderSide(color: Colors.transparent)),
+                                BorderSide(color: Colors.transparent)),
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(15),
                                 borderSide:
-                                    BorderSide(color: Colors.transparent)),
+                                BorderSide(color: Colors.transparent)),
                             suffixIcon: Padding(
                               padding: EdgeInsets.only(
                                   right: 16.w, top: 20.h, bottom: 20.h),
                               child: ImageIcon(
-                                AssetImage("assets/images/Hide.png"),
+                                AssetImage(LoginAndSignUpImages.HideImage),
                                 color: Colors.grey,
                               ),
                             ))),
@@ -251,11 +258,13 @@ class SignupScreen extends StatelessWidget {
                             child: Padding(
                               padding: EdgeInsets.only(bottom: 23.h, top: 23.h),
                               child: Text(
-                                "Sign up",
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 20.sp,
-                                    color: Color(0xff004182)),
+                                LoginAndSignupStrings.SignUp,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyLarge
+                                    ?.copyWith(
+                                        color: LoginAndSignUpColours.BackGround,
+                                        fontSize: 20.sp),
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
