@@ -3,6 +3,7 @@ import 'package:e_commerce_c9_sunday/featuers/home/presentation/pages/home_page/
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../profile/profile_screen.dart';
 import '../home_page_bloc/home_page_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -85,5 +86,5 @@ List<Widget> bottomNavBarScreens = [
   HomePage(),
   Text("2"),
   Text("3"),
-  Text("4"),
+  ProfileScreen(),
 ];

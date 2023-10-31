@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var textStyle = Theme.of(context).textTheme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 30),
       child: SingleChildScrollView(
@@ -49,7 +50,7 @@ class HomePage extends StatelessWidget {
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide:
-                              const BorderSide(color: AppColor.mainColor)),
+                          const BorderSide(color: AppColor.mainColor)),
                     ),
                   ),
                 ),
@@ -97,13 +98,11 @@ class HomePage extends StatelessWidget {
                 )),
             Row(
               children: [
-                Text(AppStrings.categories,
-                    style: Theme.of(context).textTheme.bodyMedium),
+                Text(AppStrings.categories, style: textStyle.bodyMedium),
                 Spacer(),
                 TextButton(
                     onPressed: () {},
-                    child: Text(AppStrings.viewAll,
-                        style: Theme.of(context).textTheme.bodySmall))
+                    child: Text(AppStrings.viewAll, style: textStyle.bodySmall))
               ],
             ),
             SizedBox(
@@ -123,10 +122,7 @@ class HomePage extends StatelessWidget {
             Text(
               AppStrings.homeAppliance,
               textAlign: TextAlign.start,
-              style: TextStyle(
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w500,
-                  color: AppColor.textColor),
+              style: textStyle.bodyMedium,
             ),
             GridView.builder(
               physics: NeverScrollableScrollPhysics(),
