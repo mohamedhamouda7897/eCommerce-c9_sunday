@@ -1,4 +1,3 @@
-import 'package:e_commerce_c9_sunday/core/utils/app_colors.dart';
 import 'package:e_commerce_c9_sunday/core/utils/app_images.dart';
 import 'package:e_commerce_c9_sunday/featuers/home/presentation/pages/home_page/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,28 +18,56 @@ class HomeScreen extends StatelessWidget {
           return Scaffold(
             bottomNavigationBar: ClipRRect(
               borderRadius: const BorderRadius.only(
-                  topRight: Radius.circular(18), topLeft: Radius.circular(18)),
+                  topRight: Radius.circular(15), topLeft: Radius.circular(15)),
               child: BottomNavigationBar(
                 onTap: (value) {
                   HomePageBloc.get(context).add(TabChange(tabIndex: value));
                 },
                 currentIndex: state.tabIndex,
-                backgroundColor: AppColor.bottomAppBarColor,
-                type: BottomNavigationBarType.fixed,
-                showUnselectedLabels: false,
-                showSelectedLabels: false,
-                items: const [
+                items: [
                   BottomNavigationBarItem(
-                      icon: ImageIcon(AssetImage(AppImages.homeIconImage)),
+                      icon: Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                              color: state.tabIndex == 0
+                                  ? Colors.white
+                                  : Colors.transparent,
+                              shape: BoxShape.circle),
+                          child:
+                              ImageIcon(AssetImage(AppImages.homeIconImage))),
                       label: ""),
                   BottomNavigationBarItem(
-                      icon: ImageIcon(AssetImage(AppImages.categoryIconImage)),
+                      icon: Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                              color: state.tabIndex == 1
+                                  ? Colors.white
+                                  : Colors.transparent,
+                              shape: BoxShape.circle),
+                          child: ImageIcon(
+                              AssetImage(AppImages.categoryIconImage))),
                       label: ""),
                   BottomNavigationBarItem(
-                      icon: ImageIcon(AssetImage(AppImages.faveIconImage)),
+                      icon: Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                              color: state.tabIndex == 2
+                                  ? Colors.white
+                                  : Colors.transparent,
+                              shape: BoxShape.circle),
+                          child:
+                              ImageIcon(AssetImage(AppImages.faveIconImage))),
                       label: ""),
                   BottomNavigationBarItem(
-                      icon: ImageIcon(AssetImage(AppImages.profileIconImage)),
+                      icon: Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                              color: state.tabIndex == 3
+                                  ? Colors.white
+                                  : Colors.transparent,
+                              shape: BoxShape.circle),
+                          child: ImageIcon(
+                              AssetImage(AppImages.profileIconImage))),
                       label: ""),
                 ],
               ),

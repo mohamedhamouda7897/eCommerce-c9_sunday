@@ -11,7 +11,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
 part 'sign_up_event.dart';
-
 part 'sign_up_state.dart';
 
 class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
@@ -25,13 +24,11 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
         SignUpRemoteDS remoteDS = SignUpRemoteDSImpl(apiManager);
         SignUpRepo signUpRepo = SignupRepoImpl(remoteDS);
         SignUpUseCase signUpUseCase = SignUpUseCase(signUpRepo);
-
         RequestModel requestModel = RequestModel(
             name: "hamoud",
             email: "hamoud55@gmail.com",
             password: "hamoud@123",
             phone: "01111111111");
-
         var result = await signUpUseCase.call(requestModel);
         result?.fold((l) {
           print(l.message.toString());

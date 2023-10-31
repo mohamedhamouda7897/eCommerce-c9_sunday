@@ -1,6 +1,7 @@
 import 'package:e_commerce_c9_sunday/featuers/login/presentation/pages/login_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../featuers/card/card_screen.dart';
 import '../../featuers/home/presentation/pages/home_page/main_page.dart';
 import '../../featuers/signup/presentation/pages/signup_screen.dart';
 
@@ -8,6 +9,7 @@ class RoutesName {
   static const String login = "login";
   static const String signup = "singUp";
   static const String home = "/";
+  static const String cardScreen = "CardScreen";
 }
 
 class AppRouter {
@@ -24,6 +26,10 @@ class AppRouter {
       case RoutesName.home:
         return MaterialPageRoute(
           builder: (context) => HomeScreen(),
+        );
+      case RoutesName.cardScreen:
+        return MaterialPageRoute(
+          builder: (context) => CardScreen(),
         );
       default:
         return MaterialPageRoute(
