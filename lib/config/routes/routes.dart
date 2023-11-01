@@ -8,6 +8,7 @@ class RoutesName {
   static const String login = "Login";
   static const String signup = "/";
   static const String home = "Home";
+  static const String details = "details";
 }
 
 class AppRouter {
