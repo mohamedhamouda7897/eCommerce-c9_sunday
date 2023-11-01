@@ -1,10 +1,8 @@
-import 'package:dartz/dartz.dart';
 import 'package:e_commerce_c9_sunday/core/utils/app_colors.dart';
 import 'package:e_commerce_c9_sunday/core/utils/app_images.dart';
 import 'package:e_commerce_c9_sunday/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatelessWidget {
   // const LoginScreen({super.key});
@@ -63,7 +61,7 @@ class LoginScreen extends StatelessWidget {
                           hintStyle:
                               Theme.of(context).textTheme.bodyMedium?.copyWith(
                                     fontWeight: FontWeight.w100,
-                                    color: LoginAndSignUpColours.blackfont,
+                                    color: AppColor.blackfont,
                                   ),
                           filled: true,
                           fillColor: Colors.white,
@@ -116,7 +114,7 @@ class LoginScreen extends StatelessWidget {
                                     .bodyMedium
                                     ?.copyWith(
                                         fontWeight: FontWeight.w300,
-                                        color: LoginAndSignUpColours.blackfont),
+                                        color: AppColor.blackfont),
                                 filled: true,
                                 fillColor: Colors.white,
                                 focusColor: Colors.transparent,
@@ -181,8 +179,7 @@ class LoginScreen extends StatelessWidget {
                       child: Text(
                         LoginAndSignupStrings.Login,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            color: LoginAndSignUpColours.BackGround,
-                            fontSize: 20.sp),
+                            color: AppColor.BackGround, fontSize: 20.sp),
                       ),
                     ),
                     style: ElevatedButton.styleFrom(

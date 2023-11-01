@@ -1,11 +1,8 @@
 import 'package:e_commerce_c9_sunday/core/utils/app_colors.dart';
 import 'package:e_commerce_c9_sunday/core/utils/app_images.dart';
 import 'package:e_commerce_c9_sunday/core/utils/app_strings.dart';
-import 'package:e_commerce_c9_sunday/featuers/signup/presentation/bloc/sign_up_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SignupScreen extends StatelessWidget {
   // const SignupScreen({super.key});
@@ -60,7 +57,7 @@ class SignupScreen extends StatelessWidget {
                               .bodyMedium
                               ?.copyWith(
                                   fontWeight: FontWeight.w300,
-                                  color: LoginAndSignUpColours.blackfont),
+                                  color: AppColor.blackfont),
                           filled: true,
                           fillColor: Colors.white,
                           focusColor: Colors.transparent,
@@ -111,7 +108,7 @@ class SignupScreen extends StatelessWidget {
                               .bodyMedium
                               ?.copyWith(
                                   fontWeight: FontWeight.w300,
-                                  color: LoginAndSignUpColours.blackfont),
+                                  color: AppColor.blackfont),
                           filled: true,
                           fillColor: Colors.white,
                           focusColor: Colors.transparent,
@@ -161,7 +158,7 @@ class SignupScreen extends StatelessWidget {
                               .bodyMedium
                               ?.copyWith(
                                   fontWeight: FontWeight.w300,
-                                  color: LoginAndSignUpColours.blackfont),
+                                  color: AppColor.blackfont),
                           filled: true,
                           fillColor: Colors.white,
                           focusColor: Colors.transparent,
@@ -211,7 +208,7 @@ class SignupScreen extends StatelessWidget {
                                 .bodyMedium
                                 ?.copyWith(
                                     fontWeight: FontWeight.w300,
-                                    color: LoginAndSignUpColours.blackfont),
+                                    color: AppColor.blackfont),
                             filled: true,
                             fillColor: Colors.white,
                             focusColor: Colors.transparent,
@@ -263,7 +260,7 @@ class SignupScreen extends StatelessWidget {
                                     .textTheme
                                     .bodyLarge
                                     ?.copyWith(
-                                        color: LoginAndSignUpColours.BackGround,
+                                    color: AppColor.BackGround,
                                         fontSize: 20.sp),
                               ),
                             ),

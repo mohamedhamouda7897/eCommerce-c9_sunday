@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class LoginAndSignUpStyles {
   static ThemeData LightThemedata = ThemeData(
-      scaffoldBackgroundColor: LoginAndSignUpColours.BackGround,
+      scaffoldBackgroundColor: AppColor.BackGround,
       textTheme: TextTheme(
           bodyLarge: GoogleFonts.poppins(
               fontWeight: FontWeight.w600,
