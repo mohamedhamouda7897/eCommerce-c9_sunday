@@ -25,11 +25,11 @@ class CostumeTextFormField extends StatelessWidget {
           suffixIcon: suffixIcon,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: AppColor.mainColor),
+            borderSide: const BorderSide(color: AppColors.mainColor),
           ),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
-              borderSide: const BorderSide(color: AppColor.mainColor)),
+              borderSide: const BorderSide(color: AppColors.mainColor)),
         ),
       ),
     );

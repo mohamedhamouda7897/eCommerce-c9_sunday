@@ -27,7 +27,7 @@ class HomeApplianceItems extends StatelessWidget {
           child: InkWell(
               child: ImageIcon(
             AssetImage(AppImages.faveBlue),
-            color: AppColor.mainColor,
+            color: AppColors.mainColor,
           )),
         ),
       ),

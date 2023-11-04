@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 30),
       child: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -40,17 +40,18 @@ class HomePage extends StatelessWidget {
                       hintStyle: const TextStyle(height: 1),
                       prefixIcon: const Icon(
                         Icons.search,
-                        color: AppColor.mainColor,
+                        color: AppColors.mainColor,
                         size: 30,
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
-                        borderSide: const BorderSide(color: AppColor.mainColor),
+                        borderSide:
+                            const BorderSide(color: AppColors.mainColor),
                       ),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide:
-                          const BorderSide(color: AppColor.mainColor)),
+                              const BorderSide(color: AppColors.mainColor)),
                     ),
                   ),
                 ),
@@ -63,7 +64,7 @@ class HomePage extends StatelessWidget {
                     },
                     child: const Icon(
                       Icons.shopping_cart_outlined,
-                      color: AppColor.mainColor,
+                      color: AppColors.mainColor,
                     )),
               ],
             ),
