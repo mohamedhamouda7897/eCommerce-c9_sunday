@@ -8,15 +8,21 @@ class CostumeTextFormField extends StatelessWidget {
 
   final Widget? prefixIcon;
   final Widget? suffixIcon;
+  final TextEditingController conrtoller;
 
   const CostumeTextFormField(
-      {super.key, required this.hintText, this.prefixIcon, this.suffixIcon});
+      {super.key,
+      required this.hintText,
+      this.prefixIcon,
+      this.suffixIcon,
+      required this.conrtoller});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 54.h,
       child: TextFormField(
+        controller: conrtoller,
         textAlign: TextAlign.start,
         decoration: InputDecoration(
           hintText: hintText,

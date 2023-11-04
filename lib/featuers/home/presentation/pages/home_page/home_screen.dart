@@ -10,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'category_items.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  var searchController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
                   width: 338.w,
                   height: 50.h,
                   child: TextField(
+                    controller: searchController,
                     textAlign: TextAlign.start,
                     decoration: InputDecoration(
                       hintText: AppStrings.hintText,
@@ -46,12 +47,12 @@ class HomePage extends StatelessWidget {
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide:
-                            const BorderSide(color: AppColors.mainColor),
+                        const BorderSide(color: AppColors.mainColor),
                       ),
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                           borderSide:
-                              const BorderSide(color: AppColors.mainColor)),
+                          const BorderSide(color: AppColors.mainColor)),
                     ),
                   ),
                 ),
