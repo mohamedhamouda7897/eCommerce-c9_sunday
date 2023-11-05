@@ -29,7 +29,7 @@ class CardScreen extends StatelessWidget {
               width: 398.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                border: Border.all(width: 1, color: AppColor.mainColor),
+                border: Border.all(width: 1, color: AppColors.mainColor),
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +48,7 @@ class CardScreen extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 18.sp,
                               fontWeight: FontWeight.w500,
-                              color: AppColor.textColor),
+                              color: AppColors.textColor),
                         ),
                       ),
                       SizedBox(
@@ -80,7 +80,7 @@ class CardScreen extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 18.sp,
                             fontWeight: FontWeight.w500,
-                            color: AppColor.textColor),
+                            color: AppColors.textColor),
                       )
                     ],
                   ),
@@ -93,7 +93,7 @@ class CardScreen extends StatelessWidget {
                           padding: EdgeInsets.all(8.0),
                           child: Icon(
                             Icons.delete,
-                            color: AppColor.mainColor,
+                            color: AppColors.mainColor,
                           ),
                         ),
                       ),
@@ -106,7 +106,7 @@ class CardScreen extends StatelessWidget {
                         margin: const EdgeInsets.only(right: 8, top: 10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: AppColor.mainColor,
+                          color: AppColors.mainColor,
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -167,7 +167,7 @@ class CardScreen extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 18.sp,
                           fontWeight: FontWeight.w500,
-                          color: AppColor.mainColor),
+                          color: AppColors.mainColor),
                     ),
                     SizedBox(height: 12.h),
                     Text(
@@ -175,14 +175,14 @@ class CardScreen extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 18.sp,
                           fontWeight: FontWeight.w500,
-                          color: AppColor.textColor),
+                          color: AppColors.textColor),
                     ),
                   ],
                 ),
                 Spacer(),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColor.mainColor,
+                        backgroundColor: AppColors.mainColor,
                         fixedSize: Size(270.w, 48.h),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),

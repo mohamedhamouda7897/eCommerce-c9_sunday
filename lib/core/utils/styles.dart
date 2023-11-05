@@ -8,8 +8,8 @@ class AppStyles {
     scaffoldBackgroundColor: Colors.white,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       unselectedItemColor: Colors.white,
-      selectedItemColor: AppColor.mainColor,
-      backgroundColor: AppColor.mainColor,
+      selectedItemColor: AppColors.mainColor,
+      backgroundColor: AppColors.mainColor,
       type: BottomNavigationBarType.fixed,
       showUnselectedLabels: false,
       showSelectedLabels: false,
@@ -18,17 +18,17 @@ class AppStyles {
       centerTitle: true,
       elevation: 0,
       backgroundColor: Colors.transparent,
-      iconTheme: IconThemeData(color: AppColor.mainColor),
+      iconTheme: IconThemeData(color: AppColors.mainColor),
     ),
     textTheme: TextTheme(
       bodyMedium: GoogleFonts.poppins(
           fontSize: 18.sp,
           fontWeight: FontWeight.w500,
-          color: AppColor.textColor),
+          color: AppColors.textColor),
       bodySmall: GoogleFonts.poppins(
         fontSize: 12.sp,
         fontWeight: FontWeight.w500,
-        color: AppColor.textColor,
+        color: AppColors.textColor,
       ),
     ),
   );

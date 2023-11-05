@@ -6,7 +6,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/utils/components.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  final nameController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final mobileController = TextEditingController();
+  final addressController = TextEditingController();
+
+  ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +35,10 @@ class ProfileScreen extends StatelessWidget {
           SizedBox(
             height: 16.h,
           ),
-          const CostumeTextFormField(
+          CostumeTextFormField(
+            conrtoller: nameController,
             hintText: AppStrings.yourFullName,
-            suffixIcon: Icon(Icons.edit),
+            suffixIcon: const Icon(Icons.edit),
           ),
           SizedBox(
             height: 16.h,
@@ -40,9 +47,10 @@ class ProfileScreen extends StatelessWidget {
           SizedBox(
             height: 16.h,
           ),
-          const CostumeTextFormField(
+          CostumeTextFormField(
+            conrtoller: emailController,
             hintText: AppStrings.yourEmail,
-            suffixIcon: Icon(Icons.edit),
+            suffixIcon: const Icon(Icons.edit),
           ),
           SizedBox(
             height: 16.h,
@@ -51,9 +59,10 @@ class ProfileScreen extends StatelessWidget {
           SizedBox(
             height: 16.h,
           ),
-          const CostumeTextFormField(
+          CostumeTextFormField(
+            conrtoller: passwordController,
             hintText: AppStrings.yourPassword,
-            suffixIcon: Icon(Icons.edit),
+            suffixIcon: const Icon(Icons.edit),
           ),
           SizedBox(
             height: 16.h,
@@ -62,9 +71,10 @@ class ProfileScreen extends StatelessWidget {
           SizedBox(
             height: 16.h,
           ),
-          const CostumeTextFormField(
+          CostumeTextFormField(
+            conrtoller: mobileController,
             hintText: AppStrings.yourMobileNumber,
-            suffixIcon: Icon(Icons.edit),
+            suffixIcon: const Icon(Icons.edit),
           ),
           SizedBox(
             height: 16.h,
@@ -73,9 +83,10 @@ class ProfileScreen extends StatelessWidget {
           SizedBox(
             height: 16.h,
           ),
-          const CostumeTextFormField(
+          CostumeTextFormField(
+            conrtoller: addressController,
             hintText: AppStrings.yourAddress,
-            suffixIcon: Icon(Icons.edit),
+            suffixIcon: const Icon(Icons.edit),
           ),
         ],
       ),
