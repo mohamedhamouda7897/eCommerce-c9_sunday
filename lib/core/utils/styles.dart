@@ -32,4 +32,35 @@ class AppStyles {
       ),
     ),
   );
+
+
+  static final poppins11 = GoogleFonts.poppins(
+    decoration: TextDecoration.lineThrough,
+    decorationColor: AppColor.primary.withOpacity(.6),
+    fontWeight: FontWeight.w400,
+    fontSize: 11.sp,
+    color: AppColor.primary.withOpacity(.6),
+  );
+
+  static final poppins12 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: 12.sp,
+    color: AppColor.font.withOpacity(.6),
+  );
+
+  static final poppins14 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w400,
+    fontSize: 14.sp,
+    color: AppColor.font,
+  );
+  static final poppins18 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 18.sp,
+    color: AppColor.font,
+  );
+  static final poppins20 = GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 20.sp,
+    color: Colors.white,
+  );
 }

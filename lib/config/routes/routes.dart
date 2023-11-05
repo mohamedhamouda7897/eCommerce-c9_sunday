@@ -2,6 +2,8 @@ import 'package:e_commerce_c9_sunday/featuers/login/presentation/pages/login_scr
 import 'package:flutter/material.dart';
 
 import '../../featuers/card/card_screen.dart';
+import '../../featuers/category_tap/domain/entities/ProductEntity.dart';
+import '../../featuers/category_tap/presentation/pages/item_details.dart';
 import '../../featuers/home/presentation/pages/home_page/main_page.dart';
 import '../../featuers/signup/presentation/pages/signup_screen.dart';
 
@@ -10,6 +12,7 @@ class RoutesName {
   static const String signup = "singUp";
   static const String home = "/";
   static const String cardScreen = "CardScreen";
+  static const String itemDetails = "itemDetails";
 }
 
 class AppRouter {
@@ -31,6 +34,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => CardScreen(),
         );
+
+      case RoutesName.itemDetails:
+        ProductDataEntity productDataEntity =
+            settings.arguments as ProductDataEntity;
+        return MaterialPageRoute(
+          builder: (context) => ItemDetails(productDataEntity),
+        );
+
       default:
         return MaterialPageRoute(
           builder: (context) => unDefineRoute(),
